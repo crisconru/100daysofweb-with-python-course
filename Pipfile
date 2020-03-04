@@ -12,6 +12,7 @@ pytest = "*"
 [packages]
 flask = "*"
 python-dotenv = "*"
+apistar = "*"
 
 [requires]
 python_version = "3.8"
