@@ -14,8 +14,7 @@ def _load_cars_data():
 
 
 cars = _load_cars_data()
-VALID_MANUFACTURERS = set([car["manufacturer"]
-                          for car in cars.values()])
+VALID_MANUFACTURERS = set([car["manufacturer"] for car in cars.values()])
 CAR_NOT_FOUND = 'Car not found'
 
 # definition
@@ -36,7 +35,7 @@ def list_cars() -> List[Car]:
 
 
 def create_car(car: Car) -> JSONResponse:
-    car_id = max(cars.keys())+1
+    car_id = max(cars.keys()) + 1
     car.id = car_id
     cars[car_id] = car
     return JSONResponse(Car(car), status_code=201)
